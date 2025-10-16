@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/4e5a32c68b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main id="container">
+        <div class="heart"></div>
+        <div class="hearts">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+        </div>
+
+        <form id="login-form">
+            <h1>Quem é você?</h1>
+
+            <div id="inputs">
+                <div id="input-box">
+                    <label for="name">
+                        Nome
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="name" name="name" placeholder="Digite seu nome">
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" id="login-button">Login</button>
+
+            <!-- Mensagem de erro -->
+            <p id="error-message" style="display:none; color:#ff5b5b; font-weight:bold; margin-top:10px;">
+                Nome inválido. Tente novamente.
+            </p>
+        </form>
+    </main>
+
+    <script type="text/javascript" src="login.js"></script>
+
+    <script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+
+        // posição e tamanho aleatórios
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = 3 + Math.random() * 3 + "s"; // 3–6 segundos
+        heart.style.opacity = Math.random();
+
+        document.body.appendChild(heart);
+
+        // remove o coração depois da animação
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }
+
+    // cria um coração a cada 400ms
+    setInterval(createHeart, 400);
+</script>
+
+</body>
+</html>
