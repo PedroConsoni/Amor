@@ -2,43 +2,40 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=login/index.html"> <!-- Redirecionamento automático -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiro ano de namoro!</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <script>
-        // Redirecionamento via JavaScript (garante que funcione mesmo se o meta refresh for bloqueado)
-        window.location.href = "login/index.html";
-    </script>
 </head>
 <body>
     <section class="banner">
         <div class="conteudo">
+
         </div>
     </section>
 
     <section class="mensagem">
         <h2>Feliz 1 ano de namoro, meu amor.</h2>
-        <textarea placeholder="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA   EU TE AMO" rows="6"></textarea>
+        <textarea placeholder="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA   EU TE AMO" rows="6"></textarea>
     </section>
 
     <section class="momentos">
-        <h2>Nossos Melhores Momentos</h2>
+        <h2>Nossos Melhores Momentos </h2>
 
         <div class="swiper">
+            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-                <div class="swiper-slide"> <img src="./fotos/foto1.jpg"> </div>
-                <div class="swiper-slide"> <img src="./fotos/foto2.jpg"> </div>
-                <div class="swiper-slide"> <img src="./fotos/foto3.jpg"> </div>
-                <div class="swiper-slide"> <img src="./fotos/foto4.jpg"> </div>
-                <div class="swiper-slide"> <img src="./fotos/foto5.jpg"> </div>
-                <div class="swiper-slide"> <img src="./fotos/foto6.jpg"> </div>
-                <div class="swiper-slide"> <img src="./fotos/foto7.jpg"> </div>
-                <div class="swiper-slide"> <img src="./fotos/foto8.jpg"> </div>
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="./fotos/foto1.jpg"></div>
+                <div class="swiper-slide"><img src="./fotos/foto2.jpg"></div>
+                <div class="swiper-slide"><img src="./fotos/foto3.jpg"></div>
+                <div class="swiper-slide"><img src="./fotos/foto4.jpg"></div>
+                <div class="swiper-slide"><img src="./fotos/foto5.jpg"></div>
+                <div class="swiper-slide"><img src="./fotos/foto6.jpg"></div>
+                <div class="swiper-slide"><img src="./fotos/foto7.jpg"></div>
+                <div class="swiper-slide"><img src="./fotos/foto8.jpg"></div>
             </div>
         </div>
     </section>
@@ -59,12 +56,15 @@
             },
             slidesPerView: 2,
             spaceBetween: 10,
+            loop: true,
             breakpoints: {
                 600: {
+                    loop: true,
                     slidesPerView: 3,
                     spaceBetween: 15,
                 },
                 900: {
+                    loop: true,
                     slidesPerView: 4,
                     spaceBetween: 40,
                 }
