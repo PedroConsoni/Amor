@@ -3,77 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primeiro ano de namoro!</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-
+    <title>Tela de login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/4e5a32c68b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <section class="banner">
-        <div class="conteudo">
-
+    <main id="container">
+        <div class="heart"></div>
+        <div class="hearts">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
         </div>
 
-    </section>
+        <form id="login-form">
+            <h1>Quem é você?</h1>
 
-    <section class="mensagem">
-        <h2>Feliz 1 ano de namoro, meu amor.</h2>
-        <textarea placeholder="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA   EU TE AMO" rows="6"></textarea>
-    </section>
+            <div id="inputs">
+                <div id="input-box">
+                    <label for="name">
+                        Nome
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="name" name="name" placeholder="Digite seu nome">
+                        </div>
+                    </label>
+                </div>
+            </div>
 
-    <section class="momentos">
-        <h2>Nossos Melhores Momentos </h2>
+            <button type="submit" id="login-button">Login</button>
 
-        <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide"> <img src="./fotos/foto1.jpg"> </div>
-            <div class="swiper-slide"> <img src="./fotos/foto2.jpg"> </div>
-            <div class="swiper-slide"> <img src="./fotos/foto3.jpg"> </div>
-            <div class="swiper-slide"> <img src="./fotos/foto4.jpg"> </div>
-            <div class="swiper-slide"> <img src="./fotos/foto5.jpg"> </div>
-            <div class="swiper-slide"> <img src="./fotos/foto6.jpg"> </div>
-            <div class="swiper-slide"> <img src="./fotos/foto7.jpg"> </div>
-            <div class="swiper-slide"> <img src="./fotos/foto8.jpg"> </div>
-        </div>
+            <!-- Mensagem de erro -->
+            <p id="error-message" style="display:none; color:#ff5b5b; font-weight:bold; margin-top:10px;">
+                Nome inválido. Tente novamente.
+            </p>
+        </form>
+    </main>
 
-        </div>
-
-    </section>
-
-    <footer>
-        2025 - Pedro Henrique de Jesus Consoni e Giovanna Rodrigues Clevelares
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="login.js"></script>
 
     <script>
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction:false,
-            },
-            slidesPerView:2,
-            spaceBetween: 10,
-            loop:true,
-            breakpoints: {
-                600: {
-                    loop:true,
-                    slidesPerView:3,
-                    spaceBetween: 15,
-                },
-                900: {
-                    loop:true,
-                    slidesPerView:4,
-                    spaceBetween: 40,       
-                }
-            }
-            });
-    </script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+
+        // posição e tamanho aleatórios
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = 3 + Math.random() * 3 + "s"; // 3–6 segundos
+        heart.style.opacity = Math.random();
+
+        document.body.appendChild(heart);
+
+        // remove o coração depois da animação
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }
+
+    // cria um coração a cada 400ms
+    setInterval(createHeart, 400);
+</script>
+
 </body>
 </html>
