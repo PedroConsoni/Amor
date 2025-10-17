@@ -76,6 +76,7 @@ body {
 
 /* ======= MENSAGEM ======= */
 .mensagem {
+    font-family: 'Parisienne', cursive;
     background-color: #ffeaf2; /* fundo rosa muito claro */
     color: #4a0e29;
     text-align: center;
