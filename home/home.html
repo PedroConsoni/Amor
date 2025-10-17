@@ -72,5 +72,12 @@
             }
         });
     </script>
+    <script>
+const textarea = document.querySelector('.mensagem textarea');
+textarea.addEventListener('input', () => {
+    textarea.style.height = 'auto';
+    textarea.style.height = (textarea.scrollHeight) + 'px';
+});
+</script>
 </body>
 </html>
