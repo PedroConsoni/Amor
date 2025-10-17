@@ -12,7 +12,7 @@ document.getElementById("login-form").addEventListener("submit", function (event
         localStorage.setItem("userName", nameInput);
 
         // Redireciona para o index.html
-        window.location.href = "index.html";
+        window.location.href = "home/home.html";
     } else {
         // Mostra mensagem de erro
         errorMessage.style.display = "block";
