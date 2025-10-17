@@ -72,12 +72,16 @@
             }
         });
     </script>
+     <!-- Script para o textarea se ajustar automaticamente -->
     <script>
-const textarea = document.querySelector('.mensagem textarea');
-textarea.addEventListener('input', () => {
-    textarea.style.height = 'auto';
-    textarea.style.height = (textarea.scrollHeight) + 'px';
-});
+        const textarea = document.querySelector('.mensagem textarea');
+        textarea.addEventListener('input', () => {
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
+        });
+        // Garante que o tamanho inicial esteja correto
+        textarea.style.height = textarea.scrollHeight + 'px';
+    </script>
 </script>
 </body>
 </html>
