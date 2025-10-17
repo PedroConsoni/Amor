@@ -104,7 +104,8 @@ body {
     text-align: center;
     resize: none;
     outline: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Parisienne', cursive;
+    font-style: italic;
     line-height: 1.6;
     box-shadow: none;
     transition: all 0.3s ease;
